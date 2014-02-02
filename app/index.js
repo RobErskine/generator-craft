@@ -37,11 +37,8 @@ CraftGenerator.prototype.askFor = function askFor() {
 };
 
 CraftGenerator.prototype.app = function app() {
-  this.mkdir('app');
-  this.mkdir('app/templates');
-
-  this.copy('_package.json', 'package.json');
-  this.copy('_bower.json', 'bower.json');
+  this.directory('craft', 'craft');
+  this.directory('public', 'public');
 };
 
 CraftGenerator.prototype.projectfiles = function projectfiles() {
